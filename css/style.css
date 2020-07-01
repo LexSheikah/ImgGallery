@@ -1,0 +1,165 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+/* VARIABLES */
+:root {
+  /* Colores */
+  --black: #222831;
+  --dark-gray: #393e46;
+  --normal-gray: #888888;
+  --light-gray: #eeeeee;
+  --orange: #d65a31;
+  --green: #00adb5;
+  --white: #ffffff;
+}
+
+
+/* Inicializando etiquetas HTML */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: 'Roboto', sans-serif;
+
+}
+
+header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+header h1 {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 48px;
+}
+
+main {
+  width: 100vw;
+  height: 75vh;
+  padding: 0 5vw;
+  display: flex;
+}
+
+#visor {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#visor-img {
+  width: 100%;
+  height: 85%;
+  background-color: var(--light-gray);
+  border-radius: 10px;
+}
+
+#imagen-principal {
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#visor-filtros {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-filtro {
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid  var(--black);
+  background-color: var(--white);
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.btn-filtro:hover {
+  border: 2px solid  var(--white);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-filtro:focus {
+  outline: none;
+}
+
+.btn-filtro:active {
+  transform: scale(0.9);
+}
+
+#imagenes {
+  width: 40%;
+  height: 100%;
+  padding-left: 30px;
+}
+
+#imagenes h2 {
+  height: 40px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+#categorias {
+  height: calc(100% - 40px);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.categoria {
+  padding-bottom: 20px;
+}
+
+.categoria-titulo {
+  padding-bottom: 10px;
+}
+
+.categoria-imagenes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imagen {
+  width: calc(100% / 3);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.imagen:hover {
+  opacity: 0.5;
+}
+
+.imagen:active {
+  transform: scale(0.9);
+}
+
+footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+footer h3 {
+  font-size: 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--light-gray); }
+::-webkit-scrollbar-thumb { background: var(--normal-gray); }
+::-webkit-scrollbar-thumb:hover { background: var(--dark-gray); }
