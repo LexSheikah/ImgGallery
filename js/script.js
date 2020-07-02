@@ -60,13 +60,6 @@ const renderImagenes = () => {
   })
 }
 
-let animacionPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    imgPrincipal.classList.add('showUp')
-    resolve("¡Éxito!"); // ¡Todo salió bien!
-  }, 2000);
-});
-
 // Mostrar imagen seleccionada como imagen principal
 const ampliar = (evt) => {
   imgPrincipal.style.filter = 'none' // Limpiando cualquier filtro CSS
