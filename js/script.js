@@ -2,6 +2,11 @@
 const imgPrincipal = document.querySelector('#imagen-principal')
 const sectionDCImages = document.querySelector('#dc-comic')
 const sectionMarvelImages = document.querySelector('#marvel')
+const btnBlur = document.querySelector('#btn-blur')
+const btnGris = document.querySelector('#btn-gris')
+const btnSepia = document.querySelector('#btn-sepia')
+const btnContraste = document.querySelector('#btn-contraste')
+const btnNinguno = document.querySelector('#btn-ninguno')
 
 // Pool de imágenes
 DC_CHARACTERS = [
@@ -55,13 +60,42 @@ const renderImagenes = () => {
   })
 }
 
+let animacionPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    imgPrincipal.classList.add('showUp')
+    resolve("¡Éxito!"); // ¡Todo salió bien!
+  }, 2000);
+});
+
 // Mostrar imagen seleccionada como imagen principal
-const ampliar = (e) => {
-  imgPrincipal.setAttribute('src', e.toElement.getAttribute("src"))
+const ampliar = (evt) => {
+  imgPrincipal.style.filter = 'none' // Limpiando cualquier filtro CSS
+  imgPrincipal.setAttribute('src', evt.toElement.getAttribute("src"))
+  // Aplicar animación
+  if(imgPrincipal.classList.contains('showUp')) imgPrincipal.classList.remove('showUp')
+  void imgPrincipal.offsetWidth;
+  imgPrincipal.classList.add('showUp')
 }
+
+// Aplicar filtros de CSS
+btnBlur.addEventListener("click", () => {
+  imgPrincipal.style.filter = 'blur(5px)'
+});
+btnGris.addEventListener("click", () => {
+  imgPrincipal.style.filter = 'grayscale(100%)'
+});
+btnSepia.addEventListener("click", () => {
+  imgPrincipal.style.filter = 'sepia(100%)'
+});
+btnContraste.addEventListener("click", () => {
+  imgPrincipal.style.filter = 'contrast(150%)'
+});
+btnNinguno.addEventListener("click", () => {
+  imgPrincipal.style.filter = 'none'
+});
 
 // Iniciando la Galería
 (() => {
   imgPrincipal.setAttribute('src', DC_CHARACTERS[0]) // Mostrando imagen 1 como principal
-  renderImagenes(); // Mostrando las imágenes de las categoría
+  renderImagenes() // Mostrando las imágenes de las categoría
 })()

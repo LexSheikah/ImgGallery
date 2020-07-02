@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Img Gallehttps://images.unsplash.com/photo-1583156340160-7867f31285d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80ry</title>
+  <title>Img Gallery</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -15,23 +15,23 @@
   <main>
     <section id="visor">
       <article id="visor-img">
-        <img id="imagen-principal" src="" alt="comic-character">
+        <img id="imagen-principal" src="." alt="comic-character" class="showUp">
       </article>
       <article id="visor-filtros">
         <!-- Filtros -->
         <h2>Filtros:</h2>
-        <button class="btn-filtro">Filtro 1</button>
-        <button class="btn-filtro">Filtro 2</button>
-        <button class="btn-filtro">Filtro 3</button>
-        <button class="btn-filtro">Filtro 4</button>
-        <button class="btn-filtro">Filtro 5</button>
+        <button id="btn-blur" class="btn-filtro">Blur</button>
+        <button id="btn-gris" class="btn-filtro">Gris</button>
+        <button id="btn-sepia" class="btn-filtro">Sepia</button>
+        <button id="btn-contraste" class="btn-filtro">Contraste</button>
+        <button id="btn-ninguno" class="btn-filtro">Ninguno</button>
       </article>
     </section>
     <section id="imagenes">
       <h2>Images Category</h2>
       <section id="categorias">
         <article class="categoria">
-          <h3 class="categoria-titulo">Comic DC</h3>
+          <h3 class="categoria-titulo">DC Universe</h3>
           <section id="dc-comic" class="categoria-imagenes">
             <!-- Imágenes -->
           </section>

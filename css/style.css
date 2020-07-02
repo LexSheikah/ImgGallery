@@ -50,7 +50,7 @@ main {
 }
 
 #visor {
-  width: 60%;
+  width: 65%;
   height: 100%;
   overflow: hidden;
 }
@@ -60,12 +60,18 @@ main {
   height: 85%;
   background-color: var(--light-gray);
   border-radius: 10px;
+  overflow: hidden;
 }
 
 #imagen-principal {
   width:100%;
   height: 100%;
   object-fit: contain;
+}
+
+.showUp {
+  animation-name: showUp;
+  animation-duration: 0.5s;
 }
 
 #visor-filtros {
@@ -77,17 +83,16 @@ main {
 
 .btn-filtro {
   padding: 10px 15px;
-  margin: 0 10px;
+  margin: 0 5px;
   border-radius: 10px;
   cursor: pointer;
-  border: 2px solid  var(--black);
+  border: 1px solid  var(--black);
   background-color: var(--white);
   color: var(--dark-gray);
   font-size: 18px;
 }
 
 .btn-filtro:hover {
-  border: 2px solid  var(--white);
   background-color: var(--black);
   color: var(--white);
 }
@@ -101,9 +106,9 @@ main {
 }
 
 #imagenes {
-  width: 40%;
+  width: 35%;
   height: 100%;
-  padding-left: 30px;
+  margin-left: 30px;
 }
 
 #imagenes h2 {
@@ -163,3 +168,13 @@ footer h3 {
 ::-webkit-scrollbar-track { background: var(--light-gray); }
 ::-webkit-scrollbar-thumb { background: var(--normal-gray); }
 ::-webkit-scrollbar-thumb:hover { background: var(--dark-gray); }
+
+/* Animaciones */
+@keyframes showUp {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
