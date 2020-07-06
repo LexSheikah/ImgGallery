@@ -9,9 +9,13 @@
   --dark-gray: #393e46;
   --normal-gray: #888888;
   --light-gray: #eeeeee;
-  --orange: #d65a31;
-  --green: #00adb5;
   --white: #ffffff;
+  --orange1: #d65a31;
+  --orange2: #f08a5d;
+  --green1: #00adb5;
+  --green2: #a6e3e9;
+  --yellow1: #daca25;
+  --yellow2: #f7d86b;
 }
 
 
@@ -79,22 +83,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn-filtro {
   padding: 10px 15px;
-  margin: 0 5px;
+  margin: 5px;
+  width: 120px;
   border-radius: 10px;
   cursor: pointer;
-  border: 1px solid  var(--black);
-  background-color: var(--white);
-  color: var(--dark-gray);
   font-size: 18px;
-}
-
-.btn-filtro:hover {
-  background-color: var(--black);
-  color: var(--white);
 }
 
 .btn-filtro:focus {
@@ -103,6 +101,78 @@ main {
 
 .btn-filtro:active {
   transform: scale(0.9);
+}
+
+#btn-blur:hover {
+  border: 1px solid var(--green1);
+  background-color: var(--green1);
+  color: var(--white);
+}
+
+.btn-blur-normal {
+  border: 1px solid var(--green1);
+  background-color: var(--white);
+  color: var(--green1);
+}
+
+.btn-blur-active {
+  border: 1px solid var(--green2);
+  background-color: var(--green2);
+  color: var(--white);
+}
+
+#btn-gris:hover {
+  border: 1px solid var(--dark-gray);
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+.btn-gris-normal {
+  border: 1px solid var(--dark-gray);
+  background-color: var(--white);
+  color: var(--dark-gray);
+}
+
+.btn-gris-active {
+  border: 1px solid var(--normal-gray);
+  background-color: var(--normal-gray);
+  color: var(--white);
+}
+
+#btn-sepia:hover {
+  border: 1px solid var(--yellow1);
+  background-color: var(--yellow1);
+  color: var(--white);
+}
+
+.btn-sepia-normal {
+  border: 1px solid var(--yellow1);
+  background-color: var(--white);
+  color: var(--yellow1);
+}
+
+.btn-sepia-active {
+  border: 1px solid var(--yellow2);
+  background-color: var(--yellow2);
+  color: var(--white);
+}
+
+#btn-contraste:hover {
+  border: 1px solid var(--orange1);
+  background-color: var(--orange1);
+  color: var(--white);
+}
+
+.btn-contraste-normal {
+  border: 1px solid var(--orange1);
+  background-color: var(--white);
+  color: var(--orange1);
+}
+
+.btn-contraste-active {
+  border: 1px solid var(--orange2);
+  background-color: var(--orange2);
+  color: var(--white);
 }
 
 #imagenes {
@@ -141,6 +211,7 @@ main {
   width: calc(100% / 3);
   padding: 5px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .imagen:hover {
